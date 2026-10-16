@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kaspi_catalog xmlns="http://chorny.ru" xmlns:xsi="http://w3.org" date="string" xsi:schemaLocation="http://chorny.ru kaspi_catalog.xsd">
+	<company>Ваша Компания</company>
+	<offers>
+		<offer sku="132680792">
+			<model>Перчатки 1122 132680792, размер 5 молочный</model>
+			<brand>1122</brand>
+			<price>4000</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="1735">
+			<model>Пижама</model>
+			<brand>Без бренда</brand>
+			<price>13000</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="145098445">
+			<model>Школьные Юбка-шорты</model>
+			<brand>Orisma</brand>
+			<price>5000</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="102579483">
+			<model>Перчатки 1122 3399, размер 5 черный</model>
+			<brand>1122</brand>
+			<price>4000</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="143845608">
+			<model>школьная блузка </model>
+			<brand>555</brand>
+			<price>5300</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="172246059">
+			<model>косметичка </model>
+			<brand>3s</brand>
+			<price>2600</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="171801348">
+			<model>Пижама 50</model>
+			<brand>Без бренда</brand>
+			<price>13000</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="334275496">
+			<model>Жесткий футляр 8191-9 пластик, искусственная кожа, искусственная замша, 8.2 x 16.6 см черный</model>
+			<brand>0risma</brand>
+			<price>5100</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="144169536">
+			<model>Сумка тоут</model>
+			<brand>100KM&amp;PF</brand>
+			<price>5000</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="105388287">
+			<model>Электробритва KONKA 1308-Т роторная</model>
+			<brand>KONKA 1308-Т</brand>
+			<price>8000</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="141593932">
+			<model>Топ</model>
+			<brand>1MORE</brand>
+			<price>3500</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="171801342">
+			<model>Пижама 48</model>
+			<brand>Без бренда</brand>
+			<price>13000</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="198862686">
+			<model>Стул </model>
+			<brand>baby-style</brand>
+			<price>13000</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="171801349">
+			<model>Пижама 46</model>
+			<brand>Без бренда</brand>
+			<price>13000</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="129468785_316649474">
+			<model>Одеяло Теплое зимнее гипоаллергенное 200x220 зимнее</model>
+			<brand>Без бренда</brand>
+			<price>25794</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="149986442_906170305">
+			<model>Плед 150х200 см, флис, коричневый</model>
+			<brand>Без бренда</brand>
+			<price>4989</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="YS400">
+			<model>Водное оружие Оружие YS400, пластик</model>
+			<brand>Без бренда</brand>
+			<price>3000</price>
+			<availabilities>
+				<availability available="no" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="138112245">
+			<model>Пляжная сумка для бассейна и бани</model>
+			<brand>Без бренда</brand>
+			<price>2460</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="016122392">
+			<model>1st Home Linen 5754, 60 см x 0.9 м</model>
+			<brand>1st-home-linen</brand>
+			<price>3500</price>
+			<availabilities>
+				<availability available="no" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="526241174">
+			<model>Подушка Фабрика Снов Подушка полиэстер, 70x70 см</model>
+			<brand>Фабрика Снов</brand>
+			<price>9000</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="121808249_803609509">
+			<model>Комплект белый, бордовый</model>
+			<brand>Без бренда</brand>
+			<price>3000</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="319219600">
+			<model>Подушка Фабрика Снов Подушка силиконизированное волокно, 50x70 см</model>
+			<brand>fabrika-snov</brand>
+			<price>9400</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="143139434_446104021">
+			<model>Гольфы COCO C002-3 1 пара черный, белый 28-32</model>
+			<brand>COCO</brand>
+			<price>999</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="923850737">
+			<model>Batty 399 бежевый 2XL</model>
+			<brand>batty</brand>
+			<price>3300</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="130305033_342152817">
+			<model>Фабрика Снов подушка 721849392 пух искусственный, пух лебяжий, сатин, 70x70 см</model>
+			<brand>Фабрика Снов</brand>
+			<price>13000</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="201753523">
+			<model>Колготки Noname черный</model>
+			<brand>noname</brand>
+			<price>2800</price>
+			<availabilities>
+				<availability available="no" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="176855642_466514341">
+			<model>Пижама красный</model>
+			<brand>Без бренда</brand>
+			<price>2600</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="119128933_750958678">
+			<model>MAC Styler спонж капля полиуретан 3 шт</model>
+			<brand>mac-styler</brand>
+			<price>600</price>
+			<availabilities>
+				<availability available="no" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="133308128_907879611">
+			<model>Одеяло Фабрика Снов Фабрика снов 200x220 всесезонное</model>
+			<brand>Фабрика Снов</brand>
+			<price>16200</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="817175986">
+			<model>Подушка Фабрика Снов Подушка полиэстер, 70x70 см</model>
+			<brand>fabrika-snov</brand>
+			<price>9000</price>
+			<availabilities>
+				<availability available="no" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="130264364">
+			<model>Одеяло Фабрика Снов одеяло 140x205 зимнее</model>
+			<brand>Сибирь</brand>
+			<price>16800</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="154659547_297271759">
+			<model>Пляжная сумка полиэстер, экокожа розовый</model>
+			<brand>Без бренда</brand>
+			<price>2999</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="101313767">
+			<model>Одеяло Фабрика Снов 772429 200x220 всесезонное</model>
+			<brand>fabrika-snov</brand>
+			<price>44000</price>
+			<availabilities>
+				<availability available="no" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="161287046_696024934">
+			<model>Комплект Kafuman Базовая коллекция 2-спальный полиэстер, 2 наволочки: 48x74 см</model>
+			<brand>Kafuman</brand>
+			<price>14644</price>
+			<availabilities>
+				<availability available="no" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="1704">
+			<model>Одеяло 140*205</model>
+			<brand>fabrika-snov</brand>
+			<price>16990</price>
+			<availabilities>
+				<availability available="no" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="111384345_537072554">
+			<model>Одеяло Фабрика Снов 327657 200x220 летнее</model>
+			<brand>fabrika-snov</brand>
+			<price>20000</price>
+			<availabilities>
+				<availability available="no" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="114907086_883185596">
+			<model>Колготки классические синий, серый, голубой</model>
+			<brand>Без бренда</brand>
+			<price>2488</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="724043945">
+			<model>12GO 6611 черный 42 44</model>
+			<brand>12go</brand>
+			<price>3500</price>
+			<availabilities>
+				<availability available="no" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="411246146">
+			<model>0risma 001 белый 11 лет</model>
+			<brand>0risma</brand>
+			<price>5700</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="599772558">
+			<model>Одеяло Фабрика Снов Одеяло 140x200 всесезонное</model>
+			<brand>Фабрика Снов</brand>
+			<price>9998</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="172239147_502675850">
+			<model>Пижама красный</model>
+			<brand>Без бренда</brand>
+			<price>3000</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="294705180">
+			<model>GAOERFU Фен K2 фен 2000 Вт серый, фиолетовый</model>
+			<brand>gaoerfu</brand>
+			<price>14000</price>
+			<availabilities>
+				<availability available="no" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="172239149_388120981">
+			<model>Пижама красный</model>
+			<brand>Без бренда</brand>
+			<price>3700</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="108502676_381621204">
+			<model>Одеяло Фабрика Снов Хлопок &amp; Хлопок 200x220 всесезонное</model>
+			<brand>fabrika-snov</brand>
+			<price>22000</price>
+			<availabilities>
+				<availability available="no" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="331460374">
+			<model>365 Снов плед Плед волнистый 200x150 см, бирюзовый</model>
+			<brand>365 Снов</brand>
+			<price>6000</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="994350662">
+			<model>Подушка KAAS Подушка пух лебяжий, 50x70 см</model>
+			<brand>KAAS</brand>
+			<price>8000</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="133309359_755591579">
+			<model>Подушка Фабрика Снов Фабрика снов пух искусственный, 50x70 см</model>
+			<brand>Фабрика Снов</brand>
+			<price>6600</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="960211363">
+			<model>Утяжеленное одеяло Фабрика Снов 772429 150x200 всесезонное</model>
+			<brand>fabrika-snov</brand>
+			<price>36000</price>
+			<availabilities>
+				<availability available="no" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="806058825">
+			<model>365 Снов плед Плед однотонный 200x150 см, кремовый</model>
+			<brand>365-snov</brand>
+			<price>6000</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="573468712">
+			<model>21vek Y 15 белый черный 37</model>
+			<brand>21vek</brand>
+			<price>8000</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="129379562_557444236">
+			<model>Фабрика Снов подушка Отель пух искусственный, микрофибра, 70x70 см</model>
+			<brand>Фабрика Снов</brand>
+			<price>7500</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="400514769">
+			<model>Подушка Фабрика Снов ТЕСТО микрогель, 50x70 см</model>
+			<brand>Фабрика Снов</brand>
+			<price>9120</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="132760860_086416838">
+			<model>Подушка Фабрика Снов Хлопок-Эвкалипт пух искусственный, 70x70 см</model>
+			<brand> Фабрика Снов</brand>
+			<price>11989</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="904494193">
+			<model>Колготки Noname черный</model>
+			<brand>noname</brand>
+			<price>2800</price>
+			<availabilities>
+				<availability available="no" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="146988210_665936893">
+			<model>Плед 150х200 см, велсофт, мультиколор</model>
+			<brand>Без бренда</brand>
+			<price>4800</price>
+			<availabilities>
+				<availability available="no" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="140824711_344434618">
+			<model>MAC Styler спонж капля полиуретан 1 шт</model>
+			<brand>MAC Styler</brand>
+			<price>195</price>
+			<availabilities>
+				<availability available="no" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="173629273_708192910">
+			<model>Утяжеленное одеяло Обними меня 200x220 всесезонное</model>
+			<brand>Без бренда</brand>
+			<price>47990</price>
+			<availabilities>
+				<availability available="no" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="136374375_193357907">
+			<model>MAC Styler спонж капля поролон 1 шт</model>
+			<brand>MAC Styler</brand>
+			<price>199</price>
+			<availabilities>
+				<availability available="no" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+	</offers>
+</kaspi_catalog>
