@@ -1,0 +1,35 @@
+name: Автообновление прайса Kaspi
+
+on:
+  schedule:
+    # Запуск каждые 2 часа (время по UTC)
+    - cron: '0 */2 * * *'
+  workflow_dispatch: # Позволяет запускать обновление вручную кнопкой
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Проверка репозитория
+      uses: actions/checkout@v4
+
+    - name: Настройка Python
+      uses: actions/setup-python@v5
+      with:
+        python-state: '3.10'
+
+    - name: Установка библиотек
+      run: |
+        pip install pandas requests openpyxl
+
+    - name: Скачивание таблицы и генерация XML
+      run: |
+        python generate_xml.py
+
+    - name: Сохранение XML на GitHub Pages
+      run: |
+        git config --global user.name "Kaspi Price Bot"
+        git config --global user.email "bot@github.com"
+        git add price.xml
+        git commit -m "Автоматическое обновление прайса" || exit 0
+        git push
