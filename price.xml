@@ -698,5 +698,29 @@
 				<availability available="no" storeId="PP5"/>
 			</availabilities>
 		</offer>
+		<offer sku="178652136">
+			<model>Одеяло Фабрика Снов 998874 140x220 зимнее</model>
+			<brand> Фабрика Снов</brand>
+			<price>15340</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
+		<offer sku="178652282">
+			<model>Одеяло Фабрика Снов 997794 200x220 зимнее</model>
+			<brand> Фабрика Снов</brand>
+			<price>18800</price>
+			<availabilities>
+				<availability available="yes" storeId="PP1"/>
+				<availability available="no" storeId="PP2"/>
+				<availability available="no" storeId="PP3"/>
+				<availability available="no" storeId="PP4"/>
+				<availability available="no" storeId="PP5"/>
+			</availabilities>
+		</offer>
 	</offers>
 </kaspi_catalog>
