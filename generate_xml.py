@@ -19,13 +19,14 @@ def main():
     df = pd.read_excel(io.BytesIO(response.content), engine='openpyxl')
     print("Таблица успешно прочитана в формате Excel!")
     
-    # Создаем корневой элемент XML для Kaspi
+    # Создаем корневой элемент XML для Kaspi с официальной схемой
     kaspi_catalog = ET.Element('kaspi_catalog', {
         'date': 'string',
-        'xmlns': 'http://chorny.ru',
-        'xmlns:xsi': 'http://w3.org',
-        'xsi:schemaLocation': 'http://chorny.ru kaspi_catalog.xsd'
+        'xmlns': 'kaspiShopping',
+        'xmlns:xsi': 'http://www.w3.org/2001/XMLSchema-instance',
+        'xsi:schemaLocation': 'kaspiShopping http://kaspi.kz/kaspishopping.xsd'
     })
+
     
     company = ET.SubElement(kaspi_catalog, 'company')
     company.text = "Ваша Компания"
