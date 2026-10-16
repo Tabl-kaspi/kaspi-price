@@ -4,15 +4,13 @@ import io
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 
-# ССЫЛКА НА ВАШУ GOOGLE ТАБЛИЦУ (ОБЯЗАТЕЛЬНО С output=xlsx НА КОНЦЕ)
-GOOGLE_SHEET_URL = "ВСТАВЬТЕ_СЮДА_ВАШУ_ССЫЛКУ"
+# Ваша реальная ссылка на Google Таблицу в формате Excel
+GOOGLE_SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSnieHgL-YpE6fxefPF6IAwfwhEbgEKg3vVk-b9_YTd573CxKcQXcDZXU1y0m_aiM_Wb4YKFZshkR1-/pub?output=xlsx"
 
 def main():
-    print("https://docs.google.com/spreadsheets/d/e/2PACX-1vSnieHgL-YpE6fxefPF6IAwfwhEbgEKg3vVk-b9_YTd573CxKcQXcDZXU1y0m_aiM_Wb4YKFZshkR1-/pub?output=xlsx")
+    print("Начало скачивания таблицы...")
     
-    # Скачиваем файл как бинарный поток данных
     response = requests.get(GOOGLE_SHEET_URL)
-    
     if response.status_code != 200:
         print(f"Ошибка скачивания таблицы! Код ответа: {response.status_code}")
         return
@@ -34,41 +32,57 @@ def main():
     
     offers = ET.SubElement(kaspi_catalog, 'offers')
     
+    # Склады, которые есть в вашей таблице
+    stores = ['PP1', 'PP2', 'PP3', 'PP4', 'PP5']
+    
     # Проходим по каждой строчке таблицы
     for index, row in df.iterrows():
-        # Защита от пустых строк в конце файла
-        if pd.isna(row['Артикул']) or pd.isna(row['Цена']):
+        # Защита от пустых строк и системных строк-описаний внизу таблицы
+        if pd.isna(row['SKU']) or str(row['SKU']).strip().lower() in ['sku', 'параметр', '']:
+            continue
+        if pd.isna(row['price']) or str(row['price']).strip() == '':
             continue
             
-        offer = ET.SubElement(offers, 'offer', {'sku': str(row['Артикул'])})
+        # Генерация элемента товара по его SKU
+        offer = ET.SubElement(offers, 'offer', {'sku': str(row['SKU']).split('.')[0]})
         
         model = ET.SubElement(offer, 'model')
-        model.text = str(row['Название товара'])
+        model.text = str(row['model']) if not pd.isna(row['model']) else "Без названия"
         
         brand = ET.SubElement(offer, 'brand')
-        brand.text = str(row['Бренд'])
+        brand.text = str(row['brand']) if not pd.isna(row['brand']) else "Без бренда"
         
         price = ET.SubElement(offer, 'price')
-        price.text = str(int(row['Цена']))
+        # Превращаем цену в целое число, убирая возможные копейки после Excel (.0)
+        try:
+            price.text = str(int(float(row['price'])))
+        except:
+            price.text = str(row['price'])
         
         availabilities = ET.SubElement(offer, 'availabilities')
         
-        # Проверяем доступность (работает с "yes", "да", 1 или просто если колонка заполнена)
-        avail_str = str(row['Доступность']).lower().strip()
-        status = 'yes' if avail_str in ['yes', 'да', '1', 'true'] else 'no'
-        
-        ET.SubElement(availabilities, 'availability', {'available': status, 'storeId': 'PP1'})
+        # Перебираем все склады и проверяем их доступность из таблицы
+        for store in stores:
+            if store in df.columns:
+                val = str(row[store]).lower().strip()
+                # Товар доступен, если написано "yes", "да", "1", "1.0"
+                if val in ['yes', 'да', '1', '1.0', 'true']:
+                    status = 'yes'
+                else:
+                    status = 'no'
+                
+                ET.SubElement(availabilities, 'availability', {'available': status, 'storeId': store})
 
-    # Форматируем XML в красивый вид
+    # Форматируем XML в красивый структурированный вид
     xml_str = ET.tostring(kaspi_catalog, encoding='utf-8')
     parsed_xml = minidom.parseString(xml_str)
     pretty_xml = parsed_xml.toprettyxml(encoding='utf-8')
     
-    # Записываем готовый прайс-лист
+    # Записываем готовый прайс-лист для Kaspi
     with open("price.xml", "wb") as f:
         f.write(pretty_xml)
         
-    print("Файл price.xml успешно сгенерирован и включает все новые товары!")
+    print("Файл price.xml успешно обновлен, отфильтрован и включает все новые товары!")
 
 if __name__ == "__main__":
     main()
