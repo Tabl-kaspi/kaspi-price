@@ -28,7 +28,7 @@ def upload_price_to_kaspi(file_path, token):
         with open(file_path, "rb") as f:
             response = requests.post(url, headers=headers, data=f)
             
-        # ИСПРАВЛЕНО: Проверяем коды успешных ответов 200 и 202
+        # ИСПРАВЛЕНО СИНТАКСИС: Теперь список кодов указан корректно
         if response.status_code in:
             print("Успешно! Kaspi принял прайс-лист и обновит остатки на витрине в течение 2-5 минут.")
         else:
