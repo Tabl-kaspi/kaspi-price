@@ -28,7 +28,6 @@ def upload_price_to_kaspi(file_path, token):
         with open(file_path, "rb") as f:
             response = requests.post(url, headers=headers, data=f)
             
-        # ИСПРАВЛЕНО: Прямое сравнение кодов, исключающее синтаксический сбой при форматировании текста
         if response.status_code == 200 or response.status_code == 202:
             print("Успешно! Kaspi принял прайс-лист и обновит остатки на витрине в течение 2-5 минут.")
         else:
@@ -52,12 +51,11 @@ def main():
     # Текущая дата и время для заголовка прайса
     current_date = time.strftime("%d-%m-%Y %H:%M:%S")
     
-    # Создаем корневой элемент XML по официальным стандартам Kaspi
+    # ИСПРАВЛЕНО: Удален атрибут 'xsi:schemaLocation', вызывавший ошибку валидации в Kaspi
     kaspi_catalog = ET.Element('kaspi_catalog', {
         'date': current_date,
         'xmlns': 'kaspiShopping',
-        'xmlns:xsi': 'http://w3.org',
-        'xsi:schemaLocation': 'kaspiShopping http://kaspi.kz'
+        'xmlns:xsi': 'http://w3.org'
     })
     
     # Обязательные поля шапки прайса
