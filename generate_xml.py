@@ -5,9 +5,37 @@ import time
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 
-# Ваша ссылка на Google Таблицу в формате TSV (output=tsv)
+# ==========================================
+# ВАШИ НАСТРОЙКИ И КОНСТАНТЫ
+# ==========================================
 GOOGLE_SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSnieHgL-YpE6fxefPF6IAwfwhEbgEKg3vVk-b9_YTd573CxKcQXcDZXU1y0m_aiM_Wb4YKFZshkR1-/pub?output=xlsx"
 MERCHANT_ID = "30179693"  # Ваш ID партнера из Kaspi Pay
+KASPI_TOKEN = "BrSozK7M8/D4rWYwe6oIyVs4wmwmv7iLsdJqShKPQPk="  # Секретный токен авторизации
+
+def upload_price_to_kaspi(file_path, token):
+    """
+    Принудительно загружает готовый XML-прайс в Kaspi через API,
+    чтобы сократить время обновления остатков до пары минут.
+    """
+    url = "https://kaspi.kz"
+    headers = {
+        "X-Auth-Token": token,
+        "Content-Type": "application/xml"
+    }
+    
+    print("Отправка прайс-листа в API Kaspi...")
+    try:
+        with open(file_path, "rb") as f:
+            response = requests.post(url, headers=headers, data=f)
+            
+        if response.status_code in:
+            print("Успешно! Kaspi принял прайс-лист и обновит остатки на витрине в течение 2-5 минут.")
+        else:
+            print(f"Ошибка загрузки в Kaspi! Код ответа: {response.status_code}")
+            print(f"Детали ошибки: {response.text}")
+    except Exception as e:
+        print(f"Не удалось связаться с сервером Kaspi: {str(e)}")
+
 
 def main():
     print("Начало скачивания таблицы...")
@@ -23,7 +51,7 @@ def main():
     # Текущая дата и время для заголовка прайса
     current_date = time.strftime("%d-%m-%Y %H:%M:%S")
     
-    # Создаем корневой элемент XML СТРОГО по официальным стандартам Kaspi
+    # Создаем корневой элемент XML по официальным стандартам Kaspi
     kaspi_catalog = ET.Element('kaspi_catalog', {
         'date': current_date,
         'xmlns': 'kaspiShopping',
@@ -31,7 +59,7 @@ def main():
         'xsi:schemaLocation': 'kaspiShopping http://kaspi.kz'
     })
     
-    # Обязательные поля шапки прайса в правильном порядке регистров (маленькие буквы)
+    # Обязательные поля шапки прайса
     company = ET.SubElement(kaspi_catalog, 'company')
     company.text = "Tabl-kaspi"
     
@@ -42,7 +70,7 @@ def main():
     stores = ['PP1', 'PP2', 'PP3', 'PP4', 'PP5']
     
     for index, row in df.iterrows():
-        # Безопасное чтение SKU с защитой от пустых строк
+        # Безопасное чтение SKU с защитой от пустых строк и строк-описаний параметров
         if 'SKU' not in df.columns or pd.isna(row['SKU']):
             continue
         sku_str = str(row['SKU']).strip()
@@ -66,20 +94,17 @@ def main():
             if store in df.columns:
                 val = str(row[store]).lower().strip()
                 
-                # ========================================================
-                # ИСПРАВЛЕНО: Умное распознавание текстовых статусов и любых чисел
-                # ========================================================
+                # Умное распознавание текстовых статусов и числовых остатков (1, 2, 50 и т.д.)
                 status = 'no'
                 if val in ['yes', 'да', 'true']:
                     status = 'yes'
                 else:
                     try:
-                        # Если в ячейке число (остаток товара), и оно больше нуля — передаем 'yes'
+                        # Если в ячейке число, и оно больше нуля — передаем 'yes'
                         if float(val) > 0:
                             status = 'yes'
                     except ValueError:
                         pass
-                # ========================================================
                 
                 preorder_days = ""
                 if 'preorder' in df.columns and not pd.isna(row['preorder']):
@@ -101,14 +126,19 @@ def main():
         except:
             price.text = str(row['price']).strip()
 
+    # Форматирование и запись структуры в XML-файл
     xml_str = ET.tostring(kaspi_catalog, encoding='utf-8')
     parsed_xml = minidom.parseString(xml_str)
     pretty_xml = parsed_xml.toprettyxml(encoding='utf-8')
     
-    with open("price.xml", "wb") as f:
+    file_name = "price.xml"
+    with open(file_name, "wb") as f:
         f.write(pretty_xml)
         
-    print("Файл price.xml успешно обновлен! Все числовые остатки теперь правильно выгружаются как 'yes'.")
+    print(f"Файл {file_name} успешно сгенерирован локально!")
+    
+    # ПРИНУДИТЕЛЬНЫЙ ИМПОРТ: Отправляем готовый файл в API Kaspi, не дожидаясь их часового таймера
+    upload_price_to_kaspi(file_name, KASPI_TOKEN)
 
 if __name__ == "__main__":
     main()
