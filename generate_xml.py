@@ -4,7 +4,7 @@ import io
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 
-GOOGLE_SHEET_URL = "https://google.com"
+GOOGLE_SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSnieHgL-YpE6fxefPF6IAwfwhEbgEKg3vVk-b9_YTd573CxKcQXcDZXU1y0m_aiM_Wb4YKFZshkR1-/pub?output=xlsx"
 MERCHANT_ID = "30179693"  # Ваш ID партнера из Kaspi Pay
 
 def main():
