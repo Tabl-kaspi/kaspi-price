@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<kaspi_catalog xmlns="kaspiShopping" xmlns:xsi="http://w3.org" date="17-10-2026 18:27:16" xsi:schemaLocation="kaspiShopping http://kaspi.kz">
+<kaspi_catalog xmlns="kaspiShopping" xmlns:xsi="http://w3.org" date="17-10-2026 18:56:55" xsi:schemaLocation="kaspiShopping http://kaspi.kz">
 	<company>Tabl-kaspi</company>
 	<merchantid>30179693</merchantid>
 	<offers>
@@ -823,7 +823,7 @@
 			<model>Одеяло Фабрика Снов Gold Camel 151200232 200x220 всесезонное</model>
 			<brand>fabrika-snov</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -919,7 +919,7 @@
 			<model>Noname кашпо 14 Набор 128341420, гипс</model>
 			<brand>noname</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -1063,7 +1063,7 @@
 			<model>Колготки LIMAX Колготки для омовения черный L</model>
 			<brand>limax</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -1111,7 +1111,7 @@
 			<model>Носки Заря B2205 5 пар черный 41-46</model>
 			<brand>zara</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -1147,7 +1147,7 @@
 			<model>Колготки LIMAX Колготки для омовения черный M</model>
 			<brand>limax</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -1207,7 +1207,7 @@
 			<model>Колготки LIMAX LK 10097 коричневый L</model>
 			<brand>limax</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -1327,7 +1327,7 @@
 			<model>Утепленные брюки Skin Wille M3757 черный 2XL</model>
 			<brand>skinwille</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -1375,7 +1375,7 @@
 			<model/>
 			<brand>limax</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -1399,7 +1399,7 @@
 			<model/>
 			<brand>limax</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -1903,7 +1903,7 @@
 			<model>Фабрика Снов полотенце Полотенце 140x70 см 1 шт, хлопок</model>
 			<brand>fabrika-snov</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -2095,7 +2095,7 @@
 			<model>Солнцезащитная пленка Шторка от солнца 1250x600 мм</model>
 			<brand/>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -2503,7 +2503,7 @@
 			<model>0risma 116 белый голубой 2XL</model>
 			<brand>0risma</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -2551,7 +2551,7 @@
 			<model>LIMAX DK86015C мультиколор 3 года 5 лет</model>
 			<brand>limax</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -2611,7 +2611,7 @@
 			<model>Носки LIMAX 815001B 6 пар черный, синий, серый 35,36,37,38</model>
 			<brand>LIMAX</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -2623,7 +2623,7 @@
 			<model>Носки LIMAX 815001-1 6 пар черный, синий, серый 31,32,33,34</model>
 			<brand>LIMAX</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -2995,7 +2995,7 @@
 			<model>8 и 8 Набор &quot;Д30*40икая кошка&quot; женский набор</model>
 			<brand>2026-08-08 00:00:00</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -3271,7 +3271,7 @@
 			<model>77-egg KU-3214 светло-коричневый 4 года 5 лет</model>
 			<brand>77-egg</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -3283,7 +3283,7 @@
 			<model>77-egg KU-3214 светло-коричневый 3 года 4 года</model>
 			<brand>77-egg</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -3427,7 +3427,7 @@
 			<model/>
 			<brand/>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -3451,7 +3451,7 @@
 			<model>Кальсоны Fagis черный</model>
 			<brand>Fagis</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -3679,7 +3679,7 @@
 			<model>САМО М8207 черный 56</model>
 			<brand>samo-dosug</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -3691,7 +3691,7 @@
 			<model>САМО М8207 черный 52</model>
 			<brand>samo-dosug</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -3703,7 +3703,7 @@
 			<model>САМО М8207 черный 54</model>
 			<brand>samo-dosug</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -3715,7 +3715,7 @@
 			<model>САМО М8207 черный 50</model>
 			<brand>samo-dosug</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -3727,7 +3727,7 @@
 			<model>САМО М8207 черный 48</model>
 			<brand>samo-dosug</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -3763,7 +3763,7 @@
 			<model>Колготки Зина кофе</model>
 			<brand>Зина</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -3799,7 +3799,7 @@
 			<model>САМО M129MR мультиколор 52</model>
 			<brand>samo-dosug</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -3811,7 +3811,7 @@
 			<model>САМО M129MR мультиколор 54</model>
 			<brand>samo-dosug</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -3823,7 +3823,7 @@
 			<model>САМО M129MR мультиколор 50</model>
 			<brand>samo-dosug</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -3835,7 +3835,7 @@
 			<model>САМО M129MR мультиколор 48</model>
 			<brand>samo-dosug</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -4243,7 +4243,7 @@
 			<model>Ортопедическая подушка Home Textile 35x55 см, латекс</model>
 			<brand>Home Textile</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -4255,7 +4255,7 @@
 			<model>LIMAX DK7059C черный белый XL</model>
 			<brand>limax</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -4423,7 +4423,7 @@
 			<model>Одеяло Фабрика Снов Сибирь 10533 200x220 зимнее</model>
 			<brand>Фабрика Снов</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -4435,7 +4435,7 @@
 			<model>Одеяло Сибирь 200x220 зимнее</model>
 			<brand/>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -4531,7 +4531,7 @@
 			<model>Чайник FH-15 1.5 л, стекло</model>
 			<brand/>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -4591,7 +4591,7 @@
 			<model>Подушка Фабрика Снов 50x70 см, пух искусственный</model>
 			<brand>Фабрика Снов</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -4627,7 +4627,7 @@
 			<model>1311 8803 бежевый M</model>
 			<brand>1311</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -4771,7 +4771,7 @@
 			<model>Подушка Фабрика Снов 50x70 см, пух лебяжий</model>
 			<brand>fabrika-snov</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -4915,7 +4915,7 @@
 			<model>Швабра 970235, серый</model>
 			<brand/>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -5515,7 +5515,7 @@
 			<model>Фабрика Снов подушка Подушка “Фабрика Снов”хлопок хлопок 50 *70 пух лебяжий, хлопок, 50x70 см</model>
 			<brand>fabrika-snov</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -5575,7 +5575,7 @@
 			<model>Колготки классические SYLTAN черный</model>
 			<brand>SYLTAN</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -5623,7 +5623,7 @@
 			<model>Колготки классические SYLTAN синий</model>
 			<brand>SYLTAN</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -5995,7 +5995,7 @@
 			<model>Колготки классические SYLTAN черный</model>
 			<brand>syltan</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
@@ -6103,7 +6103,7 @@
 			<model>SYLTAN 9933</model>
 			<brand>syltan</brand>
 			<availabilities>
-				<availability available="yes" storeId="PP1" preOrder="30">100</availability>
+				<availability available="no" storeId="PP1">0</availability>
 				<availability available="no" storeId="PP2">0</availability>
 				<availability available="no" storeId="PP3">0</availability>
 				<availability available="no" storeId="PP4">0</availability>
