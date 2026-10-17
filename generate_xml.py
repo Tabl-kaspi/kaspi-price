@@ -28,8 +28,8 @@ def upload_price_to_kaspi(file_path, token):
         with open(file_path, "rb") as f:
             response = requests.post(url, headers=headers, data=f)
             
-        # ИСПРАВЛЕНО СИНТАКСИС: Теперь список кодов указан корректно
-        if response.status_code in:
+        # ИСПРАВЛЕНО: Прямое сравнение кодов, исключающее синтаксический сбой при форматировании текста
+        if response.status_code == 200 or response.status_code == 202:
             print("Успешно! Kaspi принял прайс-лист и обновит остатки на витрине в течение 2-5 минут.")
         else:
             print(f"Ошибка загрузки в Kaspi! Код ответа: {response.status_code}")
