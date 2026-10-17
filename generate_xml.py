@@ -8,7 +8,7 @@ from xml.dom import minidom
 # ==========================================
 # НАСТРОЙКИ И КОНСТАНТЫ
 # ==========================================
-GOOGLE_SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSnieHgL-YpE6fxefPF6IAwfwhEbgEKg3vVk-b9_YTd573CxKcQXcDZXU1y0m_aiM_Wb4YKFZshkR1-/pub?output=xlsx"
+GOOGLE_SHEET_URL = "https://google.com"
 MERCHANT_ID = "30179693"  # Ваш ID партнера из Kaspi Pay
 
 def clean_text(text):
@@ -30,12 +30,11 @@ def main():
     
     current_date = time.strftime("%d-%m-%Y %H:%M:%S")
     
-    # Строгое официальное оформление пространства имен Kaspi по XSD-схеме
+    # Очищенный корневой элемент по самым последним правилам валидации Kaspi
     kaspi_catalog = ET.Element('kaspi_catalog', {
         'date': current_date,
         'xmlns': 'kaspiShopping',
-        'xmlns:xsi': 'http://w3.org',
-        'xsi:schemaLocation': 'kaspiShopping http://kaspi.kz'
+        'xmlns:xsi': 'http://w3.org'
     })
     
     company = ET.SubElement(kaspi_catalog, 'company')
@@ -50,7 +49,8 @@ def main():
     for index, row in df.iterrows():
         if 'SKU' not in df.columns or pd.isna(row['SKU']):
             continue
-        sku_str = str(row['SKU']).strip()
+        
+        sku_str = str(row['SKU']).strip().split('.')[0]
         if sku_str.lower() in ['sku', 'параметр', '']:
             continue
             
@@ -69,18 +69,13 @@ def main():
         
         for store in stores:
             if store in df.columns:
-                # Очищаем значение ячейки склада от дробных нулей Excel (.0)
-                raw_val = str(row[store]).strip().split('.')[0]
-                val = raw_val.lower()
+                val_str = str(row[store]).strip().split('.')[0]
                 
-                # Проверяем, является ли значение числом больше нуля
-                is_numeric_stock = val.isdigit() and int(val) > 0
+                is_numeric_stock = val_str.isdigit() and int(val_str) > 0
                 
-                # Товар в наличии, если написано "yes", "да", "true" или стоит число > 0
-                if val in ['yes', 'да', 'true'] or is_numeric_stock:
+                if val_str.lower() in ['yes', 'да', 'true'] or is_numeric_stock:
                     status = 'yes'
-                    # Если в ячейке число, выгружаем его (например 50), если просто "yes" - пишем 100 штук
-                    count = str(val) if val.isdigit() else "100"
+                    count = val_str if val_str.isdigit() else "100"
                 else:
                     status = 'no'
                     count = "0"
@@ -92,21 +87,17 @@ def main():
                     except:
                         pass
                 
-                # Формируем атрибуты склада по требованиям Kaspi XSD
                 avail_attrs = {'available': status, 'storeId': store}
                 if status == 'yes' and preorder_days != "" and preorder_days != "0":
                     avail_attrs['preOrder'] = preorder_days
                     
                 availability_elem = ET.SubElement(availabilities, 'availability', avail_attrs)
-                # Передаем точное цифровое количество остатков внутрь тега
                 availability_elem.text = count
                 
-        # Элемент price должен находиться СТРОГО в самом конце блока offer по требованиям XSD
         price = ET.SubElement(offer, 'price')
         try:
-            # Очищаем цену от пробелов и копеек
-            price_str = str(row['price']).strip().split('.')[0].replace(' ', '')
-            price.text = str(int(price_str))
+            price_clean = str(row['price']).strip().replace(' ', '').split('.')[0]
+            price.text = str(int(price_clean))
         except:
             price.text = str(row['price']).strip()
 
@@ -117,7 +108,7 @@ def main():
     with open("price.xml", "wb") as f:
         f.write(pretty_xml)
         
-    print("Файл price.xml успешно перегенерирован! Числовые остатки и XSD-схема исправлены.")
+    print("Файл price.xml успешно перегенерирован без xsi:schemaLocation!")
 
 if __name__ == "__main__":
     main()
