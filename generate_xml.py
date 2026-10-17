@@ -65,7 +65,21 @@ def main():
         for store in stores:
             if store in df.columns:
                 val = str(row[store]).lower().strip()
-                status = 'yes' if val in ['yes', 'да', '1', '1.0', 'true'] else 'no'
+                
+                # ========================================================
+                # ИСПРАВЛЕНО: Умное распознавание числовых остатков и текста
+                # ========================================================
+                status = 'no'
+                if val in ['yes', 'да', 'true']:
+                    status = 'yes'
+                else:
+                    try:
+                        # Если в ячейке число (остаток товара), и оно больше нуля — включаем доступность 'yes'
+                        if float(val) > 0:
+                            status = 'yes'
+                    except ValueError:
+                        pass
+                # ========================================================
                 
                 preorder_days = ""
                 if 'preorder' in df.columns and not pd.isna(row['preorder']):
@@ -94,7 +108,7 @@ def main():
     with open("price.xml", "wb") as f:
         f.write(pretty_xml)
         
-    print("Файл price.xml успешно перегенерирован с правильными пространствами имен!")
+    print("Файл price.xml успешно перегенерирован! Ошибка городов для числовых остатков исправлена.")
 
 if __name__ == "__main__":
     main()
