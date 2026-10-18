@@ -30,7 +30,7 @@ def main():
     
     current_date = time.strftime("%d-%m-%Y %H:%M:%S")
     
-    # Очищенный корневой элемент по самым последним правилам валидации Kaspi
+    # Корневой элемент по актуальным стандартам Kaspi
     kaspi_catalog = ET.Element('kaspi_catalog', {
         'date': current_date,
         'xmlns': 'kaspiShopping',
@@ -67,18 +67,29 @@ def main():
         
         availabilities = ET.SubElement(offer, 'availabilities')
         
+        # --- ЛОГИКА ПРОВЕРКИ ОБНУЛЕНИЯ ГЛАВНОГО СКЛАДА PP1 ---
+        pp1_val = str(row.get('PP1', 'no')).strip().split('.')[0].lower()
+        
+        # Выясняем, обнулен ли главный склад (если там 0, "no", "нет" или пусто)
+        is_pp1_empty = pp1_val in ['no', 'нет', '0', 'false', ''] or pd.isna(row.get('PP1'))
+        
         for store in stores:
             if store in df.columns:
-                val_str = str(row[store]).strip().split('.')[0]
-                
-                is_numeric_stock = val_str.isdigit() and int(val_str) > 0
-                
-                if val_str.lower() in ['yes', 'да', 'true'] or is_numeric_stock:
-                    status = 'yes'
-                    count = val_str if val_str.isdigit() else "100"
-                else:
+                # Если главный склад PP1 пустой — принудительно обнуляем ВСЕ остальные склады для этого товара
+                if is_pp1_empty:
                     status = 'no'
-                    count = "0"
+                    stock_count = "0"
+                else:
+                    # Если PP1 не пустой, обрабатываем каждый склад в стандартном режиме
+                    val_str = str(row[store]).strip().split('.')[0].lower()
+                    is_numeric_stock = val_str.isdigit() and int(val_str) > 0
+                    
+                    if val_str in ['yes', 'да', 'true'] or is_numeric_stock:
+                        status = 'yes'
+                        stock_count = val_str if val_str.isdigit() else "100"
+                    else:
+                        status = 'no'
+                        stock_count = "0"
                 
                 preorder_days = ""
                 if 'preorder' in df.columns and not pd.isna(row['preorder']):
@@ -87,12 +98,17 @@ def main():
                     except:
                         pass
                 
-                avail_attrs = {'available': status, 'storeId': store}
+                # Формируем атрибуты XML-тега
+                avail_attrs = {
+                    'available': status, 
+                    'storeId': store,
+                    'stock': stock_count
+                }
+                
                 if status == 'yes' and preorder_days != "" and preorder_days != "0":
                     avail_attrs['preOrder'] = preorder_days
                     
-                availability_elem = ET.SubElement(availabilities, 'availability', avail_attrs)
-                availability_elem.text = count
+                ET.SubElement(availabilities, 'availability', avail_attrs)
                 
         price = ET.SubElement(offer, 'price')
         try:
@@ -108,7 +124,7 @@ def main():
     with open("price.xml", "wb") as f:
         f.write(pretty_xml)
         
-    print("Файл price.xml успешно перегенерирован без xsi:schemaLocation!")
+    print("Файл price.xml успешно перегенерирован! Правило обнуления складов при PP1=0 добавлено.")
 
 if __name__ == "__main__":
     main()
