@@ -34,7 +34,7 @@ def main():
     kaspi_catalog = ET.Element('kaspi_catalog', {
         'date': current_date,
         'xmlns': 'kaspiShopping',
-        'xmlns:xsi': 'http://w3.org'
+        'xmlns:xsi': 'http://www.w3.org/2001/XMLSchema-instance'
     })
     
     company = ET.SubElement(kaspi_catalog, 'company')
@@ -69,16 +69,17 @@ def main():
         
         # --- ЛОГИКА ПРОВЕРКИ ОБНУЛЕНИЯ ГЛАВНОГО СКЛАДА PP1 ---
         pp1_val = str(row.get('PP1', 'no')).strip().split('.')[0].lower()
-        
-        # Выясняем, обнулен ли главный склад (если там 0, "no", "нет" или пусто)
         is_pp1_empty = pp1_val in ['no', 'нет', '0', 'false', ''] or pd.isna(row.get('PP1'))
         
         for store in stores:
             if store in df.columns:
-                # Если главный склад PP1 пустой — принудительно обнуляем ВСЕ остальные склады для этого товара
+                # Если главный склад PP1 пустой — принудительно выключаем ВСЕ склады для товара
                 if is_pp1_empty:
-                    status = 'no'
-                    stock_count = "0"
+                    avail_attrs = {
+                        'available': 'no', 
+                        'storeId': store,
+                        'stockCount': '0'  # Официальное имя атрибута по XSD
+                    }
                 else:
                     # Если PP1 не пустой, обрабатываем каждый склад в стандартном режиме
                     val_str = str(row[store]).strip().split('.')[0].lower()
@@ -90,24 +91,25 @@ def main():
                     else:
                         status = 'no'
                         stock_count = "0"
-                
-                preorder_days = ""
-                if 'preorder' in df.columns and not pd.isna(row['preorder']):
-                    try:
-                        preorder_days = str(row['preorder']).strip().split('.')[0]
-                    except:
-                        pass
-                
-                # Формируем атрибуты XML-тега
-                avail_attrs = {
-                    'available': status, 
-                    'storeId': store,
-                    'stock': stock_count
-                }
-                
-                if status == 'yes' and preorder_days != "" and preorder_days != "0":
-                    avail_attrs['preOrder'] = preorder_days
+                        
+                    avail_attrs = {
+                        'available': status, 
+                        'storeId': store,
+                        'stockCount': stock_count
+                    }
                     
+                    # Предзаказ добавляется только если товар доступен ("yes")
+                    if status == 'yes':
+                        preorder_days = ""
+                        if 'preorder' in df.columns and not pd.isna(row['preorder']):
+                            try:
+                                preorder_days = str(row['preorder']).strip().split('.')[0]
+                            except:
+                                pass
+                        if preorder_days != "" and preorder_days != "0":
+                            avail_attrs['preOrder'] = preorder_days
+                    
+                # Создаем пустой самозакрывающийся тег с атрибутами строго по XSD
                 ET.SubElement(availabilities, 'availability', avail_attrs)
                 
         price = ET.SubElement(offer, 'price')
@@ -124,7 +126,7 @@ def main():
     with open("price.xml", "wb") as f:
         f.write(pretty_xml)
         
-    print("Файл price.xml успешно перегенерирован! Правило обнуления складов при PP1=0 добавлено.")
+    print("Файл price.xml успешно перегенерирован! Атрибут изменен на stockCount.")
 
 if __name__ == "__main__":
     main()
